@@ -31,7 +31,7 @@ echo "${post_id}/${next_reply_id}" >> "users_lookup/${hashed}/posts";
  
  It doesn't use quotes to wrap around the strings that it adds together, so the vulnerability is that you can make the server ignore the ${next_reply_id} if you shove a space in the request back to the server.
  
- So I went ahead and fired up buprsuit and firefox. First I made an account called $get_flag2, made a new post and captured the reply with burpsuite, which is as follows:
+ So I went ahead and fired up burpsuite and firefox. First I made an account called $get_flag2, made a new post and captured the reply with burpsuite, which is as follows:
  
  ~~~
  POST /reply.wtf?post=uZyis HTTP/1.1
